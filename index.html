@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+
+
+
+
+.one,.two{
+    border: 2px solid;
+      height:150px ;
+      width: 150px;
+      transform: skew(25deg);
+      background-color: aquamarine;
+      position: relative;
+}
+.two{
+    z-index: -1;
+    background-color: rgb(252, 104, 104);
+    margin: -120px 0 0 -20px;
+    transition: 2s;
+}
+.all{
+    margin-left: 600px;
+    margin-top: 200px;
+    
+}
+.one:hover ~ .two,.two:hover{
+    z-index: 3;
+    margin: -180px 0 0 20px;
+    transition: 1s;
+}
+    
+
+
+        
+        </style>
+</head>
+<body>
+    <div class="all">
+    <div class="one"></div>
+    <div class="two"> </div>
+</div>
+</body>
+</html>
